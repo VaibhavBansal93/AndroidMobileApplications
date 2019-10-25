@@ -1,193 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android”
+    android:layout_width="match_parent”
+    android:layout_height="fill_parent” >
+
+<TableLayout
+    android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="20dp"
+    android:gravity="center_horizontal">
 
-    <TextView
+    <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/display"
-        android:layout_marginBottom="2dp"
-        android:textSize="29.5sp"
-        android:hint="calculator"/>
+        android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/numbers"
-        android:layout_below="@id/display">
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="4"
+            android:gravity="end"
+            android:editable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="50dp"/>
+    </TableRow>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:text="7"
-        android:id="@+id/btnseven"
-        android:textSize="40sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:text="8"
-        android:layout_toRightOf="@id/btnseven"
-        android:id="@+id/btneight"
-        android:textSize="40sp"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="9"
-        android:id="@+id/btnnine"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_toRightOf="@id/btneight"
-        android:textSize="40sp"/>
+        <Button
+            android:id="@+id/button_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textSize="20dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="6"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_below="@id/btnseven"
-        android:id="@+id/btnfour"
-        android:textSize="40sp"/>
+        <Button
+            android:id="@+id/button_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:textSize="20dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5"
-        android:id="@+id/btnfive"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_below="@id/btneight"
-        android:layout_toRightOf="@id/btnfour"
-        android:textSize="40sp"/>
+        <Button
+            android:id="@+id/button_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:textSize="20dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="6"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:id="@+id/btnsix"
-        android:layout_below="@id/btnnine"
-        android:layout_toRightOf="@id/btnfive"
-        android:textSize="40sp"/>
+        <Button
+            android:id="@+id/button_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20dp"/>
+    </TableRow>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:id="@+id/btnone"
-        android:layout_below="@id/btnfour"
-        android:textSize="40sp"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:id="@+id/btntwo"
-        android:layout_below="@id/btnfive"
-        android:layout_toRightOf="@id/btnone"
-        android:textSize="40sp"/>
+        <Button
+            android:id="@+id/button_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="20dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3"
-        android:id="@+id/btnthree"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_below="@id/btnsix"
-        android:layout_toRightOf="@id/btntwo"
-        android:textSize="40sp"/>
+        <Button
+            android:id="@+id/button_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textSize="20dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:id="@+id/btnzero"
-        android:layout_below="@id/btnone"
-        android:textSize="40sp"/>
+        <Button
+            android:id="@+id/button_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:textSize="20dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="."
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:id="@+id/btndot"
-        android:layout_below="@id/btntwo"
-        android:layout_toRightOf="@id/btnzero"
-        android:textSize="40sp"/>
+        <Button
+            android:id="@+id/button_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20dp"/>
+    </TableRow>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="="
-        android:id="@+id/btnresult"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_below="@id/btnthree"
-        android:layout_toRightOf="@id/btndot"
-        android:textSize="40sp"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="20dp"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_toRightOf="@id/numbers"
-        android:layout_below="@id/display">
+        <Button
+            android:id="@+id/button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="20dp"/>
 
+        <Button
+            android:id="@+id/button_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="20dp"/>
 
-    <Button
-        android:id="@+id/btnclear"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="c"
-        android:textSize="29.5sp"/>
+        <Button
+            android:id="@+id/button_multiple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textSize="20dp"/>
+    </TableRow>
 
-    <Button
-        android:id="@+id/btndivision"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="/"
-        android:textSize="29.5sp" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <Button
-        android:id="@+id/btnmultiply"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="X"
-        android:textSize="29.5sp" />
+        <Button
+            android:id="@+id/button_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20dp"/>
 
-    <Button
-        android:id="@+id/btnminus"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:textSize="29.5sp"/>
+        <Button
+            android:id="@+id/button_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="c"
+            android:textSize="20dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:textSize="29.5sp"
-        android:text="+"
-        android:id="@+id/btnplus"/>
+        <Button
+            android:id="@+id/button_equal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="20dp"/>
 
-    </LinearLayout>
-    
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/numbers">
-    </TableLayout>
-
-</RelativeLayout>
+        <Button
+            android:id="@+id/button_divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="20dp"/>
+    </TableRow>
+</TableLayout>
+</LinearLayout>
