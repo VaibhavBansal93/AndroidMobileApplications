@@ -19,12 +19,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button clear,dot;
     TextView display;
     Double num1, num2 ;
-    Boolean add, sub, div, mul;
+
+    Boolean add = false;
+    Boolean sub = false;
+    Boolean div = false;
+    Boolean mul = false;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        display = (TextView)findViewById(R.id.display);
+        display = findViewById(R.id.display);
 
         setButtons();
         setlisteners();
@@ -36,27 +40,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String text = display.getText().toString();
         switch (v.getId())
         {
+            case R.id.btnclear: display.setText(null);
+                break;
             case R.id.btnone : text = text + '1';
+                display.setText(text);
                 break;
             case R.id.btntwo : text = text + '2';
+                display.setText(text);
                 break;
             case R.id.btnthree : text = text + '3';
+                display.setText(text);
                 break;
             case R.id.btnfour : text = text + '4';
+                display.setText(text);
                 break;
             case R.id.btnfive : text = text + '5';
+                display.setText(text);
                 break;
             case R.id.btnsix : text = text + '6';
+                display.setText(text);
                 break;
             case R.id.btnseven : text = text + '7';
+                display.setText(text);
                 break;
             case R.id.btneight : text = text + '8';
+                display.setText(text);
                 break;
             case R.id.btnnine : text = text + '9';
+                display.setText(text);
                 break;
             case R.id.btnzero : text = text + '0';
+                display.setText(text);
                 break;
             case R.id.btndot : text = text + '.';
+                display.setText(text);
+                break;
 
             case R.id.btnplus : num1 = Double.parseDouble(display.getText().toString());
                 add = true;
@@ -80,35 +98,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 {
                     Double ans = num1 + num2;
                     display.setText(ans.toString());
+                    add = false;
                 }
-                if(sub)
+                else if(sub)
                 {
                     Double ans = num1 - num2;
                     display.setText(ans.toString());
+                    sub = false;
                 }
-                if(mul)
+                else if(mul)
                 {
                     Double ans = num1 * num2;
                     display.setText(ans.toString());
+                    mul = false;
                 }
-                if(div)
+                else if(div)
                 {
                     Double ans = num1 / num2;
                     display.setText(ans.toString());
+                    div = false;
                 }
-
+                break;
 
         }
-
-        display.setText(text);
-
     }
-
-    public void numberclick(View v)
-    {
-
-    }
-
     public void setButtons()
     {
         plus = (Button) findViewById(R.id.btnplus);

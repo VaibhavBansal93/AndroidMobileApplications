@@ -11,14 +11,16 @@
         android:layout_height="wrap_content"
         android:id="@+id/display"
         android:layout_marginBottom="2dp"
-        android:textSize="29.5sp"
-        android:hint="calculator"/>
+        android:padding="120dp"
+        android:textSize="20dp"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/numbers"
-        android:layout_below="@id/display">
+        android:layout_below="@id/display"
+        android:padding="15dp"
+        android:background="@drawable/rectangle">
 
         <Button
             android:layout_width="wrap_content"
@@ -26,7 +28,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:text="7"
             android:id="@+id/btnseven"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +36,7 @@
             android:text="8"
             android:layout_toRightOf="@id/btnseven"
             android:id="@+id/btneight"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -43,16 +45,16 @@
             android:id="@+id/btnnine"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_toRightOf="@id/btneight"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="6"
+            android:text="4"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_below="@id/btnseven"
             android:id="@+id/btnfour"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -62,7 +64,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_below="@id/btneight"
             android:layout_toRightOf="@id/btnfour"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -72,7 +74,7 @@
             android:id="@+id/btnsix"
             android:layout_below="@id/btnnine"
             android:layout_toRightOf="@id/btnfive"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -81,7 +83,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/btnone"
             android:layout_below="@id/btnfour"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -91,7 +93,7 @@
             android:id="@+id/btntwo"
             android:layout_below="@id/btnfive"
             android:layout_toRightOf="@id/btnone"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -101,7 +103,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_below="@id/btnsix"
             android:layout_toRightOf="@id/btntwo"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -110,7 +112,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/btnzero"
             android:layout_below="@id/btnone"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -120,7 +122,7 @@
             android:id="@+id/btndot"
             android:layout_below="@id/btntwo"
             android:layout_toRightOf="@id/btnzero"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -130,7 +132,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_below="@id/btnthree"
             android:layout_toRightOf="@id/btndot"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/textsize"/>
 
     </RelativeLayout>
 
@@ -139,7 +141,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_toRightOf="@id/numbers"
-        android:layout_below="@id/display">
+        android:layout_below="@id/display"
+        android:padding="15dp"
+        android:background="@drawable/rectangle">
 
 
         <Button
@@ -148,7 +152,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="c"
-            android:textSize="29.5sp"/>
+            android:textSize="@dimen/tsize"/>
 
         <Button
             android:id="@+id/btndivision"
@@ -156,7 +160,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
-            android:textSize="29.5sp" />
+            android:textSize="@dimen/tsize" />
 
         <Button
             android:id="@+id/btnmultiply"
@@ -164,7 +168,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="X"
-            android:textSize="29.5sp" />
+            android:textSize="@dimen/tsize" />
 
         <Button
             android:id="@+id/btnminus"
@@ -172,13 +176,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"
-            android:textSize="29.5sp"/>
+            android:textSize="@dimen/tsize"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:textSize="29.5sp"
+            android:textSize="@dimen/tsize"
             android:text="+"
             android:id="@+id/btnplus"/>
 
