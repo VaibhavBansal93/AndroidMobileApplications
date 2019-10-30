@@ -13,6 +13,7 @@
         android:text="Roll"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:id="@+id/submit"/>
+        android:id="@+id/submit"
+        android:onClick="onclick"/>
 
 </RelativeLayout>
