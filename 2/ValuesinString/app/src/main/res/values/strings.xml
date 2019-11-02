@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Values in String</string>
+    <string name="hello">Hello World!</string>
+    <string name="name">Full Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+</resources>
