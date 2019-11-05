@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Row1and5"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is Row 1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/row1and5size"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/row2"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 2\nColumn 1"
+            android:textSize="@dimen/txtsize"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 2\nColumn 2"
+            android:textSize="@dimen/txtsize"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 2\nColumn 3"
+            android:textSize="@dimen/txtsize"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/row3"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 3\nColumn 1"
+            android:textSize="@dimen/txtsize"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 3\nColumn 2"
+            android:textSize="@dimen/txtsize"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 3\nColumn 3"
+            android:textSize="@dimen/txtsize"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/row4"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 4 Column 1"
+            android:textSize="@dimen/txtsize"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 4 Column 2"
+            android:textSize="@dimen/txtsize"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Row1and5"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is Row 4"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/row1and5size"/>
+    </TableRow>
+
+
+</TableLayout>
