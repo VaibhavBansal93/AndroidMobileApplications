@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Android Versions</string>
+    <string-array name="android">
+        <item>Android 1.0</item>
+        <item>Android 1.5 Cupcake</item>
+        <item>Android 1.6 Donut</item>
+        <item>Android 2.0 Eclair</item>
+        <item>Android 2.2 Froyo</item>
+        <item>Android 2.3 Gingerbread</item>
+        <item>Android 3 HoneyComb</item>
+        <item>Android 4 Ice-Cream Sandwitch</item>
+        <item>Android 4.1 JellyBean</item>
+        <item>Android 4.4 Kitkat</item>
+        <item>Android 5 Lollipop</item>
+        <item>Android 6 Marshmallow</item>
+        <item>Android 7 Nougat</item>
+        <item>Android 8 Oreo</item>
+        <item>Android 9 Pie</item>
+        <item>Android 10</item>
+    </string-array>
+</resources>

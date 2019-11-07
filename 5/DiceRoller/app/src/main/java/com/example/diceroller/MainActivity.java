@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button submit;
     @Override
@@ -17,11 +17,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         submit = findViewById(R.id.submit);
+        submit.setOnClickListener(this);
     }
-    public void onclick(View view)
+    public void onClick(View view)
     {
         Random dice = new Random();
         int output = dice.nextInt(6) + 1;
-        Toast.makeText(this,output,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,String.valueOf(output),Toast.LENGTH_SHORT).show();
     }
 }
